@@ -1,0 +1,391 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Denny Biasiolli Website, notizie su Hi-tech, Informatica, Internet, Download, Ciclismo, Citazioni, Scienza, Sport, Lavoro, Religione.">
+    <meta name="author" content="Denny Biasiolli">
+    <meta name="keywords" content="denny biasiolli, biasiolli denny, web developer, biasiolli, creazione siti web, siti web, programmatore, cuneo, savigliano, tecnologia, informazioni, informatica, filosofia, riflessioni, citazioni">
+    <meta name="theme-color" content="#BBDEFB">
+    <link rel="icon" href="/static/blog/img/icon1.ico" type="image/jpg">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.dennybiasiolli.com/rss.php">
+    <title>
+        {{ titolo }}
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/static/libs/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="/static/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/libs/animate/3.5.1/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="/static/blog/css/style.css" rel="stylesheet">
+    <link href="/static/blog/color/default.css" rel="stylesheet">
+</head>
+<!--
+	* Creato da Denny Biasiolli
+	* www.dennybiasiolli.com
+	* Template Squadfree by Squas Design, Inc.
+-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="load"></div>
+    </div>
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#intro">
+                    <h1 class="hTitle">Denny Biasiolli</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#intro">Home</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#curriculum">Curriculum</a></li>
+                    <li><a href="#esperienze">Esperienze</a></li>
+                    <!-- <li><a href="./?sezione=news#news">Blog</a></li>
+                    <li><a href="./?sezione=citazioni#citazioni">Citazioni</a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Section: intro -->
+    <section id="intro" class="intro">
+        <div class="slogan">
+            <h4>&quot;I veri traguardi non sono scritti su cartelli,<br>sono semplicemente i luoghi dove ci porta il nostro coraggio.&quot;<br>Denny Biasiolli</h4>
+            <div class="page-scroll">
+                <a href="#contatti" class="btn btn-circle">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- /Section: intro -->
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Section: contatti -->
+    <section id="contatti" class="home-section text-center">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Contatti</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-20">
+                </div>
+            </div>
+            <div class="row">
+                <div class="row wow bounceInUp">
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <img class="rotate" src="/static/blog/img/icon/like.svg" alt="Generic placeholder image">
+                        <h3>Social</h3>
+                        <p class="lead">
+                            <a href="https://www.linkedin.com/in/dennybiasiolli" target="_blank">LinkedIn</a> | <a href="https://twitter.com/DennyBiasiolli" target="_blank">Twitter</a> | <a href="https://instagram.com/dennybiasiolli" target="_blank">Instagram</a>
+                        </p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <img  class="rotate" src="/static/blog/img/icon/picture.svg" alt="Generic placeholder image">
+                        <h3>Multimedia</h3>
+                        <p class="lead">
+                            <a href="https://instagram.com/dennybiasiolli" target="_blank">Instagram</a> | <a href="http://www.youtube.com/user/dennybiasiolli" target="_blank">YouTube</a> | <a href="https://plus.google.com/108768066312606594072/photos" target="_blank">Google</a>
+                        </p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <img  class="rotate" src="/static/blog/img/icon/bicycle.svg" alt="Generic placeholder image">
+                        <h3>Sport</h3>
+                        <p class="lead">
+                            <a href="https://connect.garmin.com/modern/profile/dennybiasiolli" target="_blank">Garmin</a> | <a href="http://www.strava.com/athletes/4137894" target="_blank">Strava</a>
+                        </p>
+                    </div><!-- /.col-lg-4 -->
+
+                </div><!-- /.row -->
+
+                <div class="row tworow wow bounceInUp">
+                    <div class="col-sm-4  wow fadeInDown text-center">
+                        <img class="rotate" src="/static/blog/img/icon/laptop.svg" alt="Generic placeholder image">
+                        <h3>My Work</h3>
+                        <p class="lead">
+                            <a href="https://github.com/dennybiasiolli" target="_blank">GitHub</a> | <a href="https://www.npmjs.com/~dennybiasiolli" target="_blank">npm</a>
+                            <br>
+                            Software developer @ <a href="http://www.maieuticallabs.it" target="_blank">Maieutical Labs</a>
+                        </p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <img  class="rotate" src="/static/blog/img/icon/map.svg" alt="Generic placeholder image">
+                        <h3>Location</h3>
+                        <p class="lead">Savigliano (CN)<br>ITALY</p>
+                    </div><!-- /.col-lg-4 -->
+
+                    <div class="col-sm-4 wow fadeInDown text-center">
+                        <img  class="rotate" src="/static/blog/img/icon/pencils.svg" alt="Generic placeholder image">
+                        <h3>Text me</h3>
+                        <p class="lead">
+                            <a href="mailto:info@dennybiasiolli.com" target="_blank">info [at] dennybiasiolli.com</a>
+                            <br>
+                            <a href="skype:denny.biasiolli?chat">Skype</a>
+                        </p>
+                    </div><!-- /.col-lg-4 -->
+
+                </div><!-- /.row -->
+            </div>
+        </div>
+    </section>
+    <!-- /Section: contatti -->
+
+
+    <!-- Section: curriculum -->
+    <section id="curriculum" class="home-section text-center">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Curriculum</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-20">
+                </div>
+            </div>
+            <div class="row wow bounceInUp">
+                <h5>Sviluppatore software presso Maieutical Labs s.r.l. - Torino</h5>
+                <h4>Interessi</h4>
+                <p class="lead" style="text-align:justify;">
+                    Sono molto interessato alle nuove tecnologie e amo tenermi aggiornato su tutto ci&ograve; che riguarda il mondo della tecnologia e dello sviluppo software.<br>
+                    Mi piacerebbe utilizzare le conoscenze acquisite in questi ultimi anni in ambito Node.js/AngularJs per creare e far crescere nuovi progetti.<br>
+                    Nel tempo libero sviluppo a scopo didattico applicazioni in Node.js utilizzando Express come framework, Sequelizer come ORM e MySql o MongoDB come database. Per il frontend utilizzo angularJs e la libreria angular-material di Google.<br>
+                    Trovate alcuni miei lavori su <a href="https://github.com/dennybiasiolli" target="_blank">GitHub (link)</a>, altri lavori sono su <a href="https://bitbucket.org/dennybiasiolli/" target="_blank">Bitbucket</a> su repository privati.
+                </p>
+                <h4>Hobby</h4>
+                <p class="lead" style="text-align:justify;">
+                    Ho un hobby particolarmente impegnativo: il triathlon. Le lunghe e solitarie sessioni di allenamento mi aiutano a svuotare la mente da ogni pensiero superfluo per focalizzarmi su ciò che è veramente importante.<br><br>
+					<i>&quot;Da qualche parte lungo la strada abbiamo confuso la comodità con la felicità.&quot;</i> (Dean Karnazes)
+                </p>
+                <h4>Esperienze recenti</h4>
+                <p class="lead" style="text-align:justify;">
+                    Ho una buona conoscenza dell'HTML e dei linguaggi di programmazione orientati allo sviluppo web. Per diletto personale ho riscritto il mio sito utilizzando PHP/MySql/jQuery/Bootstrap, senza utilizzare piattaforme preconfezionate come Wordpress o simili. Ho creato inoltre una piccola applicazione web in AngularJs per mantenere e gestire le spese domestiche.<br>
+                    Per imparare lo sviluppo su Android ho scritto un'applicazione che estrae delle citazioni casuali dal mio sito e le propone sullo smartphone, permettendone la condivisione.<br>
+                    <br>
+                    Ho un passato da sistemista che risale al lontano 2006, attualmente durante le assistenze spesso capita di dover configurare i PC dei clienti collegandoli a un dominio, condividendo cartelle e file o configurando nella maniera corretta i firewall o gli antivirus.<br>
+                    <br>
+                    Tornando indietro nel tempo, nel periodo scolastico e nei due/tre anni successivi ho approfondito la conoscenza dei linguaggi di programmazione di basso livello (Macro Assembler), alto livello (C, Turbo Pascal) e visuali (Visual Basic 6, Borland C++).<br>
+                    <br>
+                    In passato ho sviluppato applicazioni gestionali con database SQLite o MySQL, utilizzando vari metodi di accesso a quest'ultimo (interfaccia Android, interfaccia visuale applicativa con C#, interfaccia web con PHP/jQuery).
+                </p>
+                <h4>Lingue straniere</h4>
+                <p class="lead" style="text-align:justify;">
+                    Ho una buona conoscenza dell'inglese, soprattutto in ambito informatico; non ho difficolt&agrave; a leggere documentazioni tecniche. L'inglese colloquiale lo conosco in maniera sufficiente, purtroppo manca un po' di pratica per poterlo parlare fluentemente.<br>
+                    La mia conoscenza del francese risale ai tempi delle medie, da quel momento non ho pi&ugrave; fatto pratica se non per due settimane nel lontano 2007 in una trasferta di lavoro in Algeria, dove ho dovuto interagire con la regia della televisione pubblica algerina durante una manifestazione sportiva in cui mi occupavo della grafica da mandare, appunto, alla TV.
+                </p>
+                <h4>Carattere / Lavoro in team</h4>
+                <p class="lead" style="text-align:justify;">
+                    Ho seguito alcuni progetti da solo, ma per la maggior parte del tempo ho sempre lavorato in team composti da almeno tre sviluppatori senza particolari difficolt&agrave;. Trovo estremamente positivo condividere le idee sulla soluzione ai problemi di sviluppo e costruire qualcosa di grande partendo dai piccoli progetti di ognuno.<br>
+                    <br>
+                    Credo di avere un carattere socievole, maturato nei molti anni passati facendo il cameriere. Mi rapporto con i clienti con facilit&agrave; per capirne le esigenze e le difficolt&agrave; nell'utilizzo del software, per poter successivamente sviluppare soluzioni che risolvono le loro problematiche.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- /Section: curriculum -->
+
+
+    <!-- Section: esperienze -->
+    <section id="esperienze" class="home-section text-center">
+        <div class="heading-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="wow bounceInDown" data-wow-delay="0.4s">
+                            <div class="section-heading">
+                                <h2>Esperienze lavorative</h2>
+                                <i class="fa fa-2x fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <hr class="marginbot-20">
+                </div>
+            </div>
+            <div class="row">
+                <div class="wow bounceInUp">
+                    <h3>da Febbraio 2016</h3>
+                    <h4>Web developer presso Maieutical Labs s.r.l. - Torino</h4>
+                    <p class="lead" style="text-align:justify;">
+                      Work in progress, maggiori dettagli arriveranno a breve.
+                    </p>
+                    <hr>
+                    <h3>Aprile 2012 - Febbraio 2016</h3>
+                    <h4>Sviluppatore software presso Informatica EDP s.r.l. - Fossano (CN)</h4>
+                    <p class="lead" style="text-align:justify;">
+                        Sviluppavo software gestionali in C# e Visual Basic.NET, utilizzando come strumento di sviluppo Microsoft Visual Studio 2015. Questi software utilizzavano archivi in SQL Server e Access. Mi sono occupato anche di interfacciamenti con software di terze parti tramite tracciati su file CSV, file di Excel, View e Stored procedure in SQL.<br>
+                        Per organizzare lo sviluppo utilizzavamo la metodologia agile "Scrum", appoggiandoci al sistema Mantis come bug tracker e a SVN per il controllo del codice sorgente.<br>
+                        Crystal Reports 13 era lo strumento principale utilizzato per la reportistica, anche se negli ultimi tempi abbiamo migrato parzialmente verso XtraReports di DevExpress.<br>
+                        <br>
+                        Attivit&agrave; effettuate:<br>
+                        - sviluppo di software in .NET per la gestione dei rifiuti di aziende che li producono, li trasportano e/o li recuperano/smaltiscono.<br>
+                        - sviluppo di software in .NET per la gestione della manutenzione di macchinari all'interno delle aziende.<br>
+                        - creazione di moduli da integrare al software principale per gestire preventivi, contratti, DDT, fatture, ecc..<br>
+                        - creazione di stampe in Crystal Report 13<br>
+                        - creazione di stampe in DevExpress<br>
+                        - assistenza a clienti e formazione all'utilizzo del software, tramite telefono, Skype o in trasferta presso il cliente<br>
+                    </p>
+                    <hr>
+                    <h3>Gennaio 2008 - Aprile 2012</h3>
+                    <h4>Sviluppatore software presso la Edisoft s.r.l. - Saluzzo (CN)</h4>
+                    <p class="lead" style="text-align:justify;">
+                        - creazione di un software client-server che comunica tramite il .NET Remoting e gestisce code di priorit&agrave; concorrenti per l'accesso ai dati.<br>
+                        - creazione di programmi gestionali in Visual Basic 6 o su piattaforma .NET, che lavorano su database come Access, MySQL, Microsoft SQL Server 2000, 2005 e 2008.<br>
+                        - creazione di stampe in Crystal Report XI<br>
+                        - creazione di una piattaforma in php/mysql basata su Joomla per la gestione dei contatti e dello storico delle chiamate ai clienti<br>
+                    </p>
+                    <hr>
+                    <h3>Aprile 2007 - Gennaio 2008</h3>
+                    <h4>Sviluppatore software presso la Microplus Informatica s.r.l. - Marene (CN)</h4>
+                    <p class="lead" style="text-align:justify;">
+                        Mansione svolta: sviluppatore C++, frequenti trasferte in tutto il mondo, assistenza nel cronometraggio e nella gestione di manifestazioni sportive, per le quali si sviluppavano programmi appositi che gestivano l'elaborazione dei dati e la loro conseguente visualizzazione su tabelloni e reti televisive tra cui la RAI.<br />
+                        Tra le varie attivit&agrave; svolte ci sono:<br>
+                        - Giro d'Italia 2007<br>
+                        - Campionati Africani di atletica e nuoto ad Algeri (Luglio 2007)<br>
+                        - Manifestazioni sportive in tutta Italia, organizzate dalla Federazione Italiana Nuoto e dalla Federazione Italiana di Atletica Leggera<br>
+                        Programmi sviluppati principalmente in Borland C++.
+                    </p>
+                    <hr>
+                    <h3>Settembre 2005 - Marzo 2007</h3>
+                    <h4>Sistemista presso la NetSolution Informatica - Fossano (CN)</h4>
+                    <hr>
+                    <h3>Luglio-Agosto 2005</h3>
+                    <h4>Sistemista presso Alpi Informatica - Savigliano (CN)<br>Pizzaiolo presso il ristorante Peter Pan - Savigliano (CN)</h4>
+                    <p class="lead" style="text-align:justify;">
+                        Pizzaiolo al ristorante Peter Pan, al mattino effettuo assemblaggi di computer e assistenza tecnica presso il negozio di informatica "Alpi Informatica" a Savigliano
+                    </p>
+                    <hr>
+                    <h3>2000-2005</h3>
+                    <h4>Diplomato come Perito Tecnico Industriale Informatico il 2 luglio 2005 presso l'IIS G. Vallauri di Fossano (CN) con la votazione di 85/100</h4>
+                    <hr>
+                    <h3>2003-2005</h3>
+                    <h4>Ottenuto il certificato Cisco C.C.N.A. - "Cisco Certified Network Associate" il 30 maggio 2005</h4>
+                    <hr>
+                    <h3>Estate 2004</h3>
+                    <h4>Stage lavorativi presso la Microplus Informatica s.r.l. - Marene (CN)</h4>
+                    <p class="lead" style="text-align:justify;">
+                        - Riccione: addetto stampa risultati ufficiali della manifestazione "FINA World Masters Swimming Championships" - Campionati Mondiali Master di Nuoto<br>
+                        - Roma: addetto stampa risultati ufficiali della manifestazione internazionale "RomAquatica - Trofeo Sette Colli"<br>
+                        - creazione di un programma in Visual Basic 6 per gestire le iscrizioni ad una palestra per bambini<br>
+                        - Viareggio: addetto stampa risultati ufficiali della manifestazione "RESCUE 2004 - Life Saving World Championships"<br>
+                    </p>
+                    <hr>
+                    <h3>dal 1999</h3>
+                    <p class="lead" style="text-align:justify;">
+                        Ho iniziato ad interessarmi al mondo informatico in generale, finanziando questo mio hobby con il lavoro da cameriere in diversi ristoranti della provincia
+                    </p>
+                </div>
+            </div><!-- /.row -->
+        </div>
+    </section>
+    <!-- /Section: esperienze -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="wow shake" data-wow-delay="0.4s">
+                        <div class="page-scroll marginbot-30">
+                            <a href="#intro" id="totop" class="btn btn-circle">
+                                <i class="fa fa-angle-double-up animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p>&copy; 2016 - Denny Biasiolli | Template Squadfree by Squas Design, Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="/static/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/static/libs/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/static/libs/jquery.easing/1.3/jquery.easing.min.js"></script>
+    <script src="/static/libs/jquery.scrollTo/1.4.3/jquery.scrollTo.js"></script>
+    <script src="/static/libs/wow/0.1.6/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="/static/blog/js/custom.js"></script>
+
+
+
+    <!-- Start of StatCounter Code -->
+    <script type="text/javascript">
+        var sc_project=5222106;
+        var sc_invisible=1;
+        var sc_security="4e9df60e";
+    </script>
+    <script type="text/javascript"
+            src="http://www.statcounter.com/counter/counter.js"></script>
+    <noscript><div class="statcounter"><a title="free hit
+        counters" href="http://statcounter.com/free-hit-counter/"><img class="statcounter"
+                                                                       src="http://c.statcounter.com/5222106/0/4e9df60e/1/"
+                                                                       alt="free hit counters"></a></div></noscript>
+    <!-- End of StatCounter Code -->
+
+    <!-- Start of Google Analytics Code -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4942673-3']);
+        _gaq.push(['_setDomainName', '.dennybiasiolli.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!-- End of Google Analytics Code -->
+</body>
+
+</html>
