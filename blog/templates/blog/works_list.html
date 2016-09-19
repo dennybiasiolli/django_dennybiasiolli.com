@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% load blog_extras %}
+
+{% block content %}
+
+<div>
+  <h1><a href="">My Jobs</a></h1>
+</div>
+
+{% for work in works %}
+<div>
+  <h2>{{ work.job }}</h2>
+  <h3>{{ work.company }}</h3>
+  <p>Period: {{ work.period }}</p>
+  {% if work.techs.count > 0 %}
+  <p>Technologies: 
+      {% for tech in work.techs.all|dictsortreversed:"priority" %}
+        {% if forloop.counter0 > 0 %} | {% endif %}<span>{{ tech.text }}</span>
+      {% endfor %}
+  </p>
+  {% endif %}
+  <p>{{ work.details | markdownify | safe }}</p>
+</div>
+{% endfor %}
+
+{% endblock content %}

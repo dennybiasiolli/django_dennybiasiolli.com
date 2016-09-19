@@ -12,7 +12,7 @@
 <div>
   <h2><a href="">{{ post.title }}</a></h2>
   <p>published: {{ post.published_date }}</p>
-  <p>{{ post.text|markdownify|safe}}</p>
+  <p>{{ post.text | markdownify | safe }}</p>
 </div>
 {% endfor %}
 
