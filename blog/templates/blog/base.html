@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load blog_extras %}
 <!DOCTYPE html>
 <html lang="it">
 
@@ -252,49 +253,23 @@
                 </div>
             </div>
             <div class="row">
+                {% for work in works %}
                 <div class="wow bounceInUp">
-                    <h3>da Febbraio 2016</h3>
-                    <h4>Web developer presso Maieutical Labs s.r.l. - Torino</h4>
-                    <p class="lead" style="text-align:justify;">
-                      Work in progress, maggiori dettagli arriveranno a breve.
-                    </p>
-                    <hr>
-                    <h3>Aprile 2012 - Febbraio 2016</h3>
-                    <h4>Sviluppatore software presso Informatica EDP s.r.l. - Fossano (CN)</h4>
-                    <p class="lead" style="text-align:justify;">
-                        Sviluppavo software gestionali in C# e Visual Basic.NET, utilizzando come strumento di sviluppo Microsoft Visual Studio 2015. Questi software utilizzavano archivi in SQL Server e Access. Mi sono occupato anche di interfacciamenti con software di terze parti tramite tracciati su file CSV, file di Excel, View e Stored procedure in SQL.<br>
-                        Per organizzare lo sviluppo utilizzavamo la metodologia agile "Scrum", appoggiandoci al sistema Mantis come bug tracker e a SVN per il controllo del codice sorgente.<br>
-                        Crystal Reports 13 era lo strumento principale utilizzato per la reportistica, anche se negli ultimi tempi abbiamo migrato parzialmente verso XtraReports di DevExpress.<br>
-                        <br>
-                        Attivit&agrave; effettuate:<br>
-                        - sviluppo di software in .NET per la gestione dei rifiuti di aziende che li producono, li trasportano e/o li recuperano/smaltiscono.<br>
-                        - sviluppo di software in .NET per la gestione della manutenzione di macchinari all'interno delle aziende.<br>
-                        - creazione di moduli da integrare al software principale per gestire preventivi, contratti, DDT, fatture, ecc..<br>
-                        - creazione di stampe in Crystal Report 13<br>
-                        - creazione di stampe in DevExpress<br>
-                        - assistenza a clienti e formazione all'utilizzo del software, tramite telefono, Skype o in trasferta presso il cliente<br>
-                    </p>
-                    <hr>
-                    <h3>Gennaio 2008 - Aprile 2012</h3>
-                    <h4>Sviluppatore software presso la Edisoft s.r.l. - Saluzzo (CN)</h4>
-                    <p class="lead" style="text-align:justify;">
-                        - creazione di un software client-server che comunica tramite il .NET Remoting e gestisce code di priorit&agrave; concorrenti per l'accesso ai dati.<br>
-                        - creazione di programmi gestionali in Visual Basic 6 o su piattaforma .NET, che lavorano su database come Access, MySQL, Microsoft SQL Server 2000, 2005 e 2008.<br>
-                        - creazione di stampe in Crystal Report XI<br>
-                        - creazione di una piattaforma in php/mysql basata su Joomla per la gestione dei contatti e dello storico delle chiamate ai clienti<br>
-                    </p>
-                    <hr>
-                    <h3>Aprile 2007 - Gennaio 2008</h3>
-                    <h4>Sviluppatore software presso la Microplus Informatica s.r.l. - Marene (CN)</h4>
-                    <p class="lead" style="text-align:justify;">
-                        Mansione svolta: sviluppatore C++, frequenti trasferte in tutto il mondo, assistenza nel cronometraggio e nella gestione di manifestazioni sportive, per le quali si sviluppavano programmi appositi che gestivano l'elaborazione dei dati e la loro conseguente visualizzazione su tabelloni e reti televisive tra cui la RAI.<br />
-                        Tra le varie attivit&agrave; svolte ci sono:<br>
-                        - Giro d'Italia 2007<br>
-                        - Campionati Africani di atletica e nuoto ad Algeri (Luglio 2007)<br>
-                        - Manifestazioni sportive in tutta Italia, organizzate dalla Federazione Italiana Nuoto e dalla Federazione Italiana di Atletica Leggera<br>
-                        Programmi sviluppati principalmente in Borland C++.
-                    </p>
-                    <hr>
+                  <h3>{{ work.job }} @ {{ work.company }}</h3>
+                  <h4>{{ work.period }}</h4>
+                  <div class="lead" style="text-align:justify;">
+                    {{ work.details | markdownify | safe }}
+                  </div>
+                  {% if work.techs.count > 0 %}
+                  <p class="lead" style="text-align:justify;">Technologies: 
+                    {% for tech in work.techs.all|dictsortreversed:"priority" %}
+                      {% if forloop.counter0 > 0 %} | {% endif %}<span>{{ tech.text }}</span>
+                    {% endfor %}
+                  </p>
+                  {% endif %}
+                  <hr>
+                </div>
+                {% endfor %}
                     <h3>Settembre 2005 - Marzo 2007</h3>
                     <h4>Sistemista presso la NetSolution Informatica - Fossano (CN)</h4>
                     <hr>
@@ -323,7 +298,6 @@
                     <p class="lead" style="text-align:justify;">
                         Ho iniziato ad interessarmi al mondo informatico in generale, finanziando questo mio hobby con il lavoro da cameriere in diversi ristoranti della provincia
                     </p>
-                </div>
             </div><!-- /.row -->
         </div>
     </section>

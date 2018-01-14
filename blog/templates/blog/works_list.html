@@ -4,24 +4,48 @@
 
 {% block content %}
 
-<div>
-  <h1><a href="">My Jobs</a></h1>
-</div>
-
+<!-- Section: esperienze -->
+<section id="esperienze" class="home-section">
+  <div class="heading-about text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow bounceInDown" data-wow-delay="0.4s">
+            <div class="section-heading">
+              <h2>Esperienze lavorative</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-20">
+      </div>
+    </div>
 {% for work in works %}
-<div>
-  <h2>{{ work.job }}</h2>
-  <h3>{{ work.company }}</h3>
-  <p>Period: {{ work.period }}</p>
-  {% if work.techs.count > 0 %}
-  <p>Technologies: 
-      {% for tech in work.techs.all|dictsortreversed:"priority" %}
-        {% if forloop.counter0 > 0 %} | {% endif %}<span>{{ tech.text }}</span>
-      {% endfor %}
-  </p>
-  {% endif %}
-  <p>{{ work.details | markdownify | safe }}</p>
-</div>
+    <div class="row">
+      <div class="wow bounceInUp">
+        <h3 class="text-center">{{ work.period }}</h3>
+        <h4 class="text-center">{{ work.job }} @ {{ work.company }}</h4>
+        <p class="lead" style="text-align:justify;">
+          {{ work.details | markdownify | safe }}
+        </p>
+        {% if work.techs.count > 0 %}
+        <p>Technologies: 
+          {% for tech in work.techs.all|dictsortreversed:"priority" %}
+            {% if forloop.counter0 > 0 %} | {% endif %}<span>{{ tech.text }}</span>
+          {% endfor %}
+        </p>
+        {% endif %}
+        <hr>
+      </div>
+    </div>
 {% endfor %}
+  </div>
+</section>
 
 {% endblock content %}
